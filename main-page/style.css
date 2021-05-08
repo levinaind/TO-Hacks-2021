@@ -219,6 +219,7 @@ form button:hover {
 
 main {
 	margin-top: 1em;
+	display: flex;
 }
 main h1 {
 	font-size: 2em;
@@ -256,7 +257,6 @@ main h1 {
 }
 
 .log .location {
-	
 	margin-right: 10%;
 }
 .log .location .place {
@@ -278,18 +278,15 @@ main h1 {
 	margin-right: 5%;
 }
 main .column-left {
-	
-	float:left;
 	width: 70%;
 }
 main .column-right {
-	float:left;
 	width: 25%;
 }
-main .row:after{
+main .row:after {
 	content: "";
 	display: table;
-	clear:both;
+	clear: both;
 }
 
 .map-pos {
@@ -305,5 +302,5 @@ main .row:after{
 }
 
 .s-input {
-	position:fixed;
+	position: fixed;
 }
