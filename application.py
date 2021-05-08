@@ -43,6 +43,7 @@ def index():
         month = row['time'][0:2]
         date = row['time'][3:5]
         locations.append([row['place'], row['city'], date, month])
+
     return render_template("index.html", locations=locations)
 
 
