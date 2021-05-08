@@ -1,0 +1,96 @@
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+    margin-top: -0.5em;
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	color: white;
+	background-color: #007194;
+	align-items: center;
+	border-bottom: solid #ebac78 2px;
+    
+}
+
+.sitename {
+    margin-left: 2em;
+    font-family: "Cookie", cursive;
+	font-size: 2em;
+}
+
+#nav-log {
+    margin-right: 2em;
+	color: white;
+	text-decoration: none;
+}
+#nav-log:hover {
+	text-decoration: underline var(--primary-yellow) 2px;
+	transition: linear 0.1s;
+}
+
+body {
+	background-color: #6FBEE5; 
+	font-family: "Poppins", sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+    margin: 5vh auto;
+	text-align: center;
+	color: white;
+	font-weight: 700;
+	font-size: 3em;
+}
+
+.mainform {
+    font-weight: 600;
+    display: flex;
+	justify-content: space-around;
+	background-color: white;
+	width: 20vw;
+	height: 50vh;
+	border-radius: 10px;
+	padding: 3em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: auto;
+	border: solid #ebac78 3px;
+}
+
+.input {
+    border: hidden;
+    width: 300px;
+    height: 20px;
+    background-color: #EDEDED;
+    outline: none;
+    border-radius: 25px;
+}
+
+.input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+button {
+	width: 10em;
+	height: 2em;
+	background-color: #ebac78;
+	border: none;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	color: white;
+	font-size: 1.1em;
+	margin: auto;
+}
+
+button:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
