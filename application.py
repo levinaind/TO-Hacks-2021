@@ -37,7 +37,13 @@ def login_required(f):
 @app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
-    return render_template("index.html")
+    locations = []
+    rows = db.execute("SELECT * FROM locations WHERE userid=:user", {"user": session['user_id']}).fetchall()
+    for row in rows:
+        month = row['time'][0:2]
+        date = row['time'][3:5]
+        locations.append([row['place'], row['city'], date, month])
+    return render_template("index.html", locations=locations)
 
 
 # LOGIN

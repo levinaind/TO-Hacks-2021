@@ -27,30 +27,58 @@
 		<section class="sitename">TraceNext</section>
 		<a href="">My Profile</a>
 	</header>
-	<div class=forms">
-	<form action="">
-		<div class="entries">
-			<input type="text" id="searchInput" name="location" placeholder="Location" />
-			<input type="date" name="date" placeholder="" />
-		</div>
-		<button>ADD</button>
-	</form>
-</div>
 	<main>
-		<div class="column-left">
-		<h1>Dashboard</h1>
-		<div class="log">
-			<div class="date">
-				<div class="day">17</div>
-				<div class="month">Aug</div>
-			</div>
-			<div class="location">
-				<div class="place">University of Waterloo</div>
-				<div class="area">Waterloo, ON</div>
-			</div>
-			<button>X</button>
+		<div class="entries">
+			<form action="">
+				<input type="text" id="searchInput" name="location" placeholder="Location" />
+				<input type="date" name="date" placeholder="" />
+				<button>ADD</button>
+			</form>
 		</div>
-	</div>
+		<div class="column-left">
+			<h1>Dashboard</h1>
+			<ul>
+				<li>
+					<div class="log">
+						<div class="date">
+							<div class="day">15</div>
+							<div class="month">Aug</div>
+						</div>
+						<div class="location">
+							<div class="place">University of Waterloo</div>
+							<div class="area">Waterloo, ON</div>
+						</div>
+						<button>X</button>
+					</div>
+				</li>
+				<li>
+				<div class="log">
+					<div class="date">
+						<div class="day">17</div>
+						<div class="month">Aug</div>
+					</div>
+					<div class="location">
+						<div class="place">University of Waterloo</div>
+						<div class="area">Waterloo, ON</div>
+					</div>
+					<button>X</button>
+				</div>
+			</li>
+				<li>
+					<div class="log">
+						<div class="date">
+							<div class="day">11</div>
+							<div class="month">Aug</div>
+						</div>
+						<div class="location">
+							<div class="place">University of Waterloo</div>
+							<div class="area">Waterloo, ON</div>
+						</div>
+						<button>X</button>
+					</div>
+				</li>
+			</ul>
+		</div>
 	<div class="column-right">
 		<!-- Google map -->
 		<div class="map-pos" id="map"></div>

@@ -232,7 +232,7 @@ main h1 {
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 30px;
-	width: 40%;
+	width: 60%;
 	font-family: "Poppins", sans-serif;
 	height: 4em;
 	padding: 0.5em;
@@ -255,6 +255,7 @@ main h1 {
 }
 
 .log .location {
+
 	margin-right: 10%;
 }
 .log .location .place {
@@ -274,4 +275,34 @@ main h1 {
 	font-size: 2em;
 	color: var(--primary-yellow);
 	margin-right: 5%;
+}
+main .column-left {
+
+	float:left;
+	width: 70%;
+}
+main .column-right {
+	float:left;
+	width: 25%;
+}
+main .row:after{
+	content: "";
+	display: table;
+	clear:both;
+}
+
+.map-pos {
+	position: fixed;
+	height: 400px;
+}
+
+.forms {
+	position: fixed;
+}
+.geo-data {
+	color: white;
+}
+
+.s-input {
+	position:fixed;
 }
