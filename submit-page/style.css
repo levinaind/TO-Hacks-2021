@@ -159,6 +159,14 @@ header .sitename {
 	font-family: "Cookie", cursive;
 	font-size: 2em;
 }
+header nav a {
+	color: white;
+	text-decoration: none;
+}
+header nav a:hover {
+	text-decoration: underline var(--primary-yellow) 2px;
+	transition: linear 0.1s;
+}
 
 body {
 	background-color: var(--primary-blue);
