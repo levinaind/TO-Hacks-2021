@@ -1,0 +1,57 @@
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link
+		rel="icon"
+		type="image"
+		sizes="32x32"
+		href="./images/tohacks-icon.webp"
+	/>
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="style.css" />
+
+	<title>TraceNext</title>
+</head>
+
+<body>
+	<header>
+		<section class="sitename">TraceNext</section>
+		<nav>
+			<a href="" id="nav-about">about</a>
+			<a href="" id="nav-works">how it works</a>
+			<a href="" id="nav-contacts">contact us</a>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Tell us a bit about you.</h1>
+		<form action="">
+			<div class="vaccine">
+				<h2>Have you been partially/fully vaccinated?</h2>
+				<input type="radio" id="vaccine-yes" name="vaccine" value="yes" />
+				<label for="vaccine-yes">Yes</label>
+				<input type="radio" id="vaccine-no" name="vaccine" value="no" />
+				<label for="vaccine-no">No</label>
+			</div>
+			<div class="covid">
+				<h2>
+					Have you been confirmed positive for COVID-19 in the last
+					<i>21 days</i>?
+				</h2>
+				<input type="radio" id="covid-yes" name="covid" value="yes" />
+				<label for="covid-yes">Yes</label>
+				<input type="radio" id="covid-no" name="covid" value="no" />
+				<label for="covid-no">No</label>
+			</div>
+			<button>SUBMIT</button>
+		</form>
+	</main>
+
+	<script src="app.js"></script>
+</body>
