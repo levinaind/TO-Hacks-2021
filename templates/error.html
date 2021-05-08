@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <link rel="stylesheet" href="{{url_for('static', filename='indexstyle.css')}}"/>
+    <title>TraceNext - ERROR</title>
+{% endblock %}
+
+{% block body %}
+    <h1 class="alert alert-danger">ERROR: {{ message }}</h1>
+{% endblock %}

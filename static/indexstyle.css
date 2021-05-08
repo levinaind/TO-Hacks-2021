@@ -1,0 +1,277 @@
+/* CSS RESET  */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ------------------------------------------------------------------------------------ */
+
+:root {
+	--primary-blue: #6fbee5;
+	--primary-yellow: #ebac78;
+	--accent-blue: #007194;
+	--placeholder: rgb(216, 216, 216);
+}
+
+body {
+	background-color: var(--primary-blue);
+	font-family: "Poppins", sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	color: white;
+	background-color: var(--accent-blue);
+	align-items: center;
+	border-bottom: solid var(--primary-yellow) 2px;
+}
+header nav {
+	width: 30%;
+	display: flex;
+	justify-content: space-around;
+	margin-right: 2em;
+}
+header .sitename {
+	margin-left: 2em;
+	font-family: "Cookie", cursive;
+	font-size: 2em;
+}
+header a {
+	color: white;
+	text-decoration: none;
+	margin-right: 5%;
+}
+header a:hover {
+	text-decoration: underline var(--primary-yellow) 2px;
+	transition: linear 0.1s;
+}
+
+form {
+	width: 100%;
+	display: flex;
+	margin: 1em;
+	align-items: center;
+}
+form input {
+	display: block;
+	border-radius: 20px;
+	height: 3em;
+	margin: 0.8em 0;
+	border: solid var(--primary-yellow) 2px;
+	width: 40vw;
+	padding: 0 1.5em;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+}
+form input ::placeholder {
+	font-family: "Poppins", sans-serif;
+	color: gray;
+}
+
+form button {
+	height: 3em;
+	width: 6em;
+	padding: 0.5em;
+	font-weight: 6em;
+	margin: 1em;
+	background-color: white;
+	border: solid var(--primary-yellow) 2px;
+	font-weight: 600;
+	font-size: 1.2em;
+	font-family: "Poppins", sans-serif;
+}
+form button:hover {
+	background-color: var(--primary-yellow);
+	text-decoration: underline;
+	color: white;
+	cursor: pointer;
+}
+
+main {
+	margin-top: 1em;
+}
+main h1 {
+	font-size: 2em;
+	font-weight: 700;
+	margin-left: 1em;
+}
+
+.log {
+	border: solid var(--primary-yellow) 2px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 30px;
+	width: 40%;
+	font-family: "Poppins", sans-serif;
+	height: 4em;
+	padding: 0.5em;
+	background-color: white;
+	margin: 1em;
+}
+
+.log .date {
+	margin: 0 1em;
+	font-weight: 600;
+	font-size: 1.3em;
+}
+.log .date .day {
+	color: var(--primary-yellow);
+	font-size: 2em;
+}
+.log .date .month {
+	font-size: 1em;
+	color: rgb(78, 78, 78);
+}
+
+.log .location {
+	margin-right: 10%;
+}
+.log .location .place {
+	font-weight: 600;
+	font-size: 1.8em;
+	margin-bottom: 0.2em;
+}
+.log .location .area {
+	font-weight: 500;
+	font-size: 1.3em;
+	color: var(--accent-blue);
+}
+
+.log button {
+	border: none;
+	background-color: white;
+	font-size: 2em;
+	color: var(--primary-yellow);
+	margin-right: 5%;
+}

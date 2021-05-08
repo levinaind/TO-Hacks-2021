@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	<link rel="stylesheet" href="{{url_for('static', filename='medinfostyle.css')}}" />
+	<title>TraceNext - Medical Info</title>
+{% endblock %}
+
+{% block body %}
+	<header>
+		<section class="sitename">TraceNext</section>
+		<nav>
+			<a href="" id="nav-about">about</a>
+			<a href="" id="nav-works">how it works</a>
+			<a href="" id="nav-contacts">contact us</a>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Tell us a bit about you.</h1>
+		<form action="/medicalinfo" method="post">
+			<div class="vaccine">
+				<h2>Have you been partially/fully vaccinated?</h2>
+				<input type="radio" id="vaccine-yes" name="vaccine" value=1 />
+				<label for="vaccine-yes">Yes</label>
+				<input type="radio" id="vaccine-no" name="vaccine" value=0 />
+				<label for="vaccine-no">No</label>
+			</div>
+			<div class="covid">
+				<h2>
+					Have you been confirmed positive for COVID-19 in the last
+					<i>21 days</i>?
+				</h2>
+				<input type="radio" id="covid-yes" name="covid" value=1 />
+				<label for="covid-yes">Yes</label>
+				<input type="radio" id="covid-no" name="covid" value=0 />
+				<label for="covid-no">No</label>
+			</div>
+			<button type="SUBMIT">SUBMIT</button>
+		</form>
+	</main>
+
+	<script src="app.js"></script>
+{% endblock %}

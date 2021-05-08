@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <link rel="stylesheet" href="{{url_for('static', filename='myprofilestyle.css')}}" />
+    <title>My Profile</title>
+{% endblock %}
+
+{% block body %}
+    <header>
+        <section class="sitename">TraceNext</section>
+        <a href="#" id="nav-log">Log Out</a>
+    </header>
+
+    <h1>
+        My Profile
+    </h1>
+
+    <div class="mainform">
+        <form action="" id="form1">
+            <div>
+                <label for="firstname">First Name</label><br>
+                <input class="input" type="text" name="myprofile" id="firstname" required /><br>
+            </div>
+            <label for="lastname">Last Name</label><br>
+            <input class="input" type="text" name="myprofile" id="lastname" required /><br>
+            <div>
+                <label for="email">Email</label><br>
+                <input class="input" type="email" name="myprofile" id="email" required /><br>
+            </div>
+            <div>
+                <label for="password">Old Password</label><br>
+                <input class="input" type="password" name="myprofile" id="password" required /><br>
+            </div>
+            <div>
+                <label for="password">New Password</label><br>
+                <input class="input" type="password" name="myprofile" id="newpassword" required /><br>
+            </div>
+            <div>
+                <label>
+                    COVID-19 VACCINATION<br>
+                    <input type="radio" name="vacc-yes">
+                    Yes
+                </label>
+                <label>
+                    <input type="radio" name="vacc-no">
+                    No
+                </label>
+            </div>
+            <button>
+                SAVE CHANGES
+            </button>
+        </form>
+    </div>
+{% endblock %}
