@@ -65,65 +65,32 @@ h1 {
 	border: solid #ebac78 3px;
 }
 
-.profile {
+.input {
     border: hidden;
     width: 300px;
     height: 20px;
     background-color: #EDEDED;
     outline: none;
     border-radius: 25px;
-	margin: auto;
 }
 
-.profile:focus, textarea:focus, select:focus{
+.input:focus, textarea:focus, select:focus{
     outline: none;
 }
 
-#back {
-	text-decoration: none;
-	width: 8em;
+button {
+	width: 10em;
 	height: 2em;
-	padding-top: 5px;
-	padding-bottom: 5.5px;
-	padding-left: 1em;
-	padding-right: 1em;
 	background-color: #ebac78;
 	border: none;
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
 	color: white;
 	font-size: 1.1em;
-	text-align: center;
-	margin-top: 3em;
-	margin-left: 1em;
-	margin-right: 1em;
+	margin: auto;
 }
 
-#back:hover {
-	cursor: pointer;
-	text-decoration: underline;
-}
-
-#edit {
-	text-decoration: none;
-	width: 8em;
-	height: 2em;
-	padding-top: 5px;
-	padding-bottom: 5.5px;
-	padding-left: 1em;
-	padding-right: 1em;
-	background-color: #ebac78;
-	border: none;
-	font-family: "Poppins", sans-serif;
-	font-weight: 500;
-	color: white;
-	font-size: 1.1em;
-	
-	margin-top: 3em;
-	margin-left: 1em;
-}
-
-#edit:hover {
+button:hover {
 	cursor: pointer;
 	text-decoration: underline;
 }

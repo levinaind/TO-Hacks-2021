@@ -25,40 +25,37 @@
     </h1>
 
     <div class="mainform">
-        <form action="" id="form1">
+        
+        <form method="GET" action="app.py" id="form1">
             <div>
-                <label for="firstname">First Name</label><br>
-                <input class="input" type="text" name="myprofile" id="firstname" required /><br>
+                First Name<br>
+                <p class="profile" type="text" name="first_name" id="first_name">{{user.first_name}}</p>
             </div>
-            <label for="lastname">Last Name</label><br>
-            <input class="input" type="text" name="myprofile" id="lastname" required /><br>
+                Last Name<br>
+                <p class="profile" type="text" name="last_name" id="last_name"></p>
             <div>
-                <label for="email">Email</label><br>
-                <input class="input" type="email" name="myprofile" id="email" required /><br>
-            </div>
-            <div>
-                <label for="password">Old Password</label><br>
-                <input class="input" type="password" name="myprofile" id="password" required /><br>
+                Email<br>
+                <p class="profile" type="email" name="email" id="email"></p>
             </div>
             <div>
-                <label for="password">New Password</label><br>
-                <input class="input" type="password" name="myprofile" id="newpassword" required /><br>
+                Password<br>
+                <p class="profile" type="password" name="password" id="password"></p>
             </div>
             <div>
-                <label>
-                    COVID-19 VACCINATION<br>
-                    <input type="radio" name="vacc-yes">
-                    Yes
-                </label>
-                <label>
-                    <input type="radio" name="vacc-no">
-                    No
-                </label>
+                COVID-19 VACCINATION
+                <p class="profile" type="text" name="vaccination" id="vaccination"></p>
             </div>
-            <button>
-                SAVE CHANGES
-            </button>
+            <div>
+                <br>
+                <a id="back" href="index.html" >
+                    BACK
+                </a>
+                <a id="edit" href="../edit-profile-page/edit.html" >
+                    EDIT PROFILE
+                </a>
+            </div>
         </form>
+        
     </div>
 </body>
 
