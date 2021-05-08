@@ -1,0 +1,362 @@
+/* CSS RESET  */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ------------------------------------------------------------------------------------ */
+
+:root {
+	--primary-blue: #6fbee5;
+	--primary-yellow: #ebac78;
+	--accent-blue: #007194;
+	--placeholder: rgb(216, 216, 216);
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	color: white;
+	background-color: var(--accent-blue);
+	align-items: center;
+	border-bottom: solid var(--primary-yellow) 2px;
+}
+header nav {
+	width: 30%;
+	display: flex;
+	justify-content: space-around;
+	margin-right: 2em;
+}
+header .sitename {
+	margin-left: 2em;
+	font-family: "Cookie", cursive;
+	font-size: 2em;
+}
+
+body {
+	background-color: var(--primary-blue);
+	font-family: "Poppins", sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+main {
+	display: flex;
+}
+
+main .info {
+	height: 90vh;
+	width: 50%;
+	color: white;
+	padding: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 5%;
+}
+main .info .infotext {
+	width: 85%;
+}
+main .info h1 {
+	font-weight: 700;
+	font-size: 3em;
+	margin-bottom: 0.7em;
+	text-decoration: underline var(--primary-yellow);
+}
+main .info h2 {
+	width: 100%;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 2em;
+}
+
+main .mainform {
+	width: 40%;
+	margin-right: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: auto;
+}
+
+main .mainform form {
+	background-color: white;
+	border-radius: 10px;
+	padding: 10%;
+	height: 40%;
+	width: 80%;
+	box-shadow: 0px 8px #65bbe6;
+}
+main .mainform form label {
+	display: none;
+}
+main .mainform form input,
+main .mainform form button {
+	display: block;
+	height: 15%;
+	margin-bottom: 5%;
+	border-radius: 5px;
+	border: solid 1.5px var(--placeholder);
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	color: rgb(67, 71, 71);
+}
+main .mainform form input {
+	width: 95%;
+	padding-left: 5%;
+}
+main .mainform form button {
+	width: 101%;
+	background-color: var(--primary-yellow);
+	border-color: var(primary-yellow);
+	color: white;
+	text-transform: uppercase;
+	font-weight: 600;
+	cursor: pointer;
+}
+main .mainform form input::placeholder {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+}
+main .mainform form input :focus {
+	border: 2px solid var(--primary-yellow);
+}
+
+main .mainform form .login {
+	font-size: 8.5px;
+	font-weight: 500;
+	text-align: center;
+	color: var(--neutral-gray-blue);
+}
+main .mainform form .login a {
+	font-weight: 600;
+	color: var(--primary-blue);
+}
+
+.attribution {
+	font-size: 14px;
+	text-align: center;
+	font-weight: 700;
+	margin-top: 2em;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+.welcomemsg {
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	margin: 5%;
+}
+.welcomemsg .welcometext {
+	width: 50%;
+}
+.welcomemsg h2,
+.welcomemsg h3,
+.welcomemsg p {
+	color: white;
+	font-family: "Poppins", sans-serif;
+}
+.welcomemsg h2 {
+	font-size: 500%;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+.welcomemsg h3 {
+	width: 80%;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+.welcomemsg p {
+	margin-top: 2em;
+	line-height: 2em;
+}
+#welcomename {
+	text-transform: capitalize;
+}
+#welcomeemail {
+	text-transform: lowercase;
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 830px) {
+	main {
+		flex-direction: column;
+	}
+
+	main .info {
+		width: auto;
+		height: auto;
+		margin: 4em 0 2em 0;
+		text-align: center;
+		display: flex;
+		align-items: center;
+	}
+	main .info h1 {
+		font-size: 2em;
+	}
+	main .info h2 {
+		font-size: 0.8em;
+	}
+
+	main .mainform {
+		width: 90%;
+		margin: auto;
+	}
+	main .mainform form {
+		height: 20em;
+		margin-top: 0.7em;
+	}
+
+	.attribution {
+		margin: 2em;
+	}
+
+	.welcomemsg {
+		flex-direction: column;
+	}
+	.welcomemsg .welcometext {
+		width: 100%;
+	}
+	.welcomemsg h3,
+	.welcomemsg h2,
+	.welcomemsg p {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+.welcomemsg .welcomegif {
+	width: 50%;
+}
