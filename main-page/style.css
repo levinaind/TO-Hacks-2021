@@ -227,6 +227,7 @@ main h1 {
 }
 
 .log {
+	position: fixed;
 	border: solid var(--primary-yellow) 2px;
 	display: flex;
 	justify-content: space-between;
@@ -255,6 +256,7 @@ main h1 {
 }
 
 .log .location {
+	
 	margin-right: 10%;
 }
 .log .location .place {
@@ -274,4 +276,34 @@ main h1 {
 	font-size: 2em;
 	color: var(--primary-yellow);
 	margin-right: 5%;
+}
+main .column-left {
+	
+	float:left;
+	width: 70%;
+}
+main .column-right {
+	float:left;
+	width: 25%;
+}
+main .row:after{
+	content: "";
+	display: table;
+	clear:both;
+}
+
+.map-pos {
+	position: fixed;
+	height: 400px;
+}
+
+.forms {
+	position: fixed;
+}
+.geo-data {
+	color: white;
+}
+
+.s-input {
+	position:fixed;
 }
