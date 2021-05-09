@@ -15,6 +15,7 @@ const confirm = document.querySelector(".submit-confirm");
 confirm.addEventListener("click", function (e) {
 	e.preventDefault();
 	sendEmail(true);
+	window.location.href = "/complete-page/index.html";
 });
 
 function sendEmail(positive) {
