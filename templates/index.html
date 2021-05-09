@@ -3,8 +3,11 @@
 {% block title %}
 	<link rel="stylesheet" href="{{url_for('static', filename='indexstyle.css')}}" />
 	<script
-		src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCnMi7Nf77XbwmLZGDqQlhQx6-AyU8fSSQ&callback=initMap"
-		async defer> </script>
+			src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCnMi7Nf77XbwmLZGDqQlhQx6-AyU8fSSQ&callback=initMap"
+			async
+			defer
+		></script>
+
 	<title>TraceNext</title>
 {% endblock %}
 
@@ -13,15 +16,6 @@
 		<section class="sitename">TraceNext</section>
 		<a href="">My Profile</a>
 	</header>
-	<div class=forms">
-		<form action="/" method="post">
-			<div class="entries">
-				<input type="text" id="searchInput" name="location" placeholder="Location">
-				<input type="date" name="date" placeholder="">
-			</div>
-			<button>ADD</button>
-		</form>
-	</div>
 	<main>
 		<div class="column-left">
 			<h1>Dashboard</h1>
@@ -43,76 +37,32 @@
 				{% endfor %}
 			</ul>
 		</div>
-		<div class="column-right">
-		<!-- Google map -->
-		<div class="map-pos" id="map"></div>
+		<section class="column-right">
+				<!-- Google map -->
+				<div class="map-pos" id="map"></div>
 
-		<!-- Display geolocation data -->
-		<ul class="geo-data">
-			<li>Full Address: <span id="location"></span></li>
-		</ul>
-		<script>
-			function initMap() {
-				var map = new google.maps.Map(document.getElementById('map'), {
-					center: { lat: 43.6532, lng: -79.3832 },
-					zoom: 8
-				});
-				var input = document.getElementById('searchInput');
-				map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-				var autocomplete = new google.maps.places.Autocomplete(input);
-				autocomplete.bindTo('bounds', map);
-
-				var infowindow = new google.maps.InfoWindow();
-				var marker = new google.maps.Marker({
-					map: map,
-					anchorPoint: new google.maps.Point(0, -29)
-				});
-
-				autocomplete.addListener('place_changed', function () {
-					infowindow.close();
-					marker.setVisible(false);
-					var place = autocomplete.getPlace();
-					if (!place.geometry) {
-						window.alert("Autocomplete's returned place contains no geometry");
-						return;
-					}
-
-					// If the place has a geometry, then present it on a map.
-					if (place.geometry.viewport) {
-						map.fitBounds(place.geometry.viewport);
-					} else {
-						map.setCenter(place.geometry.location);
-						map.setZoom(17);
-					}
-					marker.setIcon(({
-						url: place.icon,
-						size: new google.maps.Size(71, 71),
-						origin: new google.maps.Point(0, 0),
-						anchor: new google.maps.Point(17, 34),
-						scaledSize: new google.maps.Size(35, 35)
-					}));
-					marker.setPosition(place.geometry.location);
-					marker.setVisible(true);
-
-					var address = '';
-					if (place.address_components) {
-						address = [
-							(place.address_components[0] && place.address_components[0].short_name || ''),
-							(place.address_components[1] && place.address_components[1].short_name || ''),
-							(place.address_components[2] && place.address_components[2].short_name || '')
-						].join(' ');
-					}
-
-					infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-					infowindow.open(map, marker);
-
-
-					document.getElementById('location').innerHTML = place.formatted_address;
-
-				});
-			}
-		</script>
-		</div>
-	</main>
+				<form action="/" method="post" id="location-form">
+					<!-- Display geolocation data -->
+					<ul class="geo-data">
+						<li>
+							Location
+							<span id="location">
+								Please enter location on above search bar
+							</span>
+						</li>
+					</ul>
+					<div class="entries">
+						<input
+							type="text"
+							id="searchInput"
+							name="location"
+							placeholder="Location"
+						/>
+						<input type="date" name="date" placeholder="" />
+					</div>
+					<button type="submit" form="location-form">ADD</button>
+				</form>
+			</section>
+		</main>
+		<script src="{{url_for('static', filename='mapapp.js')}}"></script>
 {% endblock %}
