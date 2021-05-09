@@ -136,6 +136,11 @@ table {
 	--accent-blue: #007194;
 	--placeholder: rgb(216, 216, 216);
 }
+button:hover {
+	cursor: pointer;
+	color: var(--primary-yellow);
+	transition: 0.2s;
+}
 
 body {
 	background-color: var(--primary-blue);
@@ -233,15 +238,12 @@ form button:hover {
 	background-color: var(--primary-yellow);
 	text-decoration: underline;
 	color: white;
-	cursor: pointer;
 }
-
 
 .dashboard {
 	display: flex;
 	justify-content: space-between;
 	margin: 0 5%;
-
 }
 .dashboard h1 {
 	font-size: 2em;
@@ -274,8 +276,6 @@ form button:hover {
 main {
 	margin: 1em 5% 0 5%;
 	display: flex;
-
-
 }
 
 .log {
@@ -332,10 +332,11 @@ main {
 	border: none;
 	background-color: white;
 	font-size: 2em;
-	color: var(--primary-yellow);
+	color: black;
 	margin-right: 5%;
 	width: 1em;
 }
+
 main .column-left {
 	width: 60%;
 }
@@ -361,7 +362,6 @@ main .row:after {
 
 .s-input {
 	position: fixed;
-
 }
 
 #searchInput {
@@ -372,5 +372,62 @@ main .row:after {
 	letter-spacing: 1.1px;
 
 	display: block;
+}
 
+.modal {
+	background-color: rgba(0, 0, 0, 0.637);
+	transition: 200ms;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+}
+.modal__contents {
+	background-color: white;
+	padding: 2em 4em;
+	width: 50%;
+	border-radius: 10px;
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.modal__exit {
+	background-color: white;
+	border: none;
+	align-self: flex-end;
+	font-size: 1.5em;
+	font-weight: 600;
+}
+.modal__contents h3 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+.modal__contents p {
+	text-align: center;
+	font-size: 0.9em;
+	line-height: 1.1em;
+	color: gray;
+}
+.modal__contents p b {
+	font-weight: 600;
+	text-decoration: underline;
+	color: red;
+}
+.submit-confirm {
+	height: 2em;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 2em;
+	border: none;
+	background-color: white;
+}
+.submit-confirm:hover {
+	text-decoration: underline;
 }
