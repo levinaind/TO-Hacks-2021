@@ -17,7 +17,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="style.css" />
-
+		<script src="gmaps.js"></script>
 		<script
 			src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCnMi7Nf77XbwmLZGDqQlhQx6-AyU8fSSQ&callback=initMap"
 			async
@@ -30,7 +30,7 @@
 	<body>
 		<header>
 			<section class="sitename">TraceNext</section>
-			<a href="">My Profile</a>
+			<a href="../profile-page/myprofile.html">My Profile</a>
 		</header>
 
 		<section class="dashboard">
@@ -64,18 +64,45 @@
 							Location
 							<span id="location">
 								Please enter location on above search bar
-								
 							</span>
 						</li>
 					</ul>
 					<div class="entries">
-						<input type="text" id ="searchInput" name="location" placeholder="Enter the location" />
+						<input
+							type="text"
+							id="searchInput"
+							name="location"
+							placeholder="Enter the location"
+						/>
 						<input type="date" name="date" placeholder="" />
 					</div>
-					<button>ADD</button>
+					<button id="add">ADD</button>
 				</form>
 			</section>
 		</main>
+		<!-- Modal tutorial by https://www.youtube.com/watch?v=KX0NR5HtQ1Q -->
+		<div class="modal">
+			<div class="modal__contents">
+				<button class="modal__exit">X</button>
+				<h3>Are you sure you've inputted all your locations?</h3>
+				<p>
+					Submitting this form will log changes to your profile and may notify
+					others if you have declared a positive COVID-19 test results.
+					<b>Please do not use this to spam.</b>
+				</p>
+				<button class="submit-confirm">confirm</button>
+			</div>
+		</div>
+		<!-- API for sending emails (still experimenting) -->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init("YOUR_USER_ID");
+			})();
+		</script>
 		<script src="app.js"></script>
 	</body>
 </html>

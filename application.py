@@ -9,6 +9,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
+
 # Check for environment variable
 if not os.getenv("DATABASE_URL"):
     raise RuntimeError("DATABASE_URL is not set")
@@ -134,6 +135,7 @@ def register():
         n = len(rows)
 
         email = request.form.get("email")
+
         password = request.form.get("password")
         firstname = request.form.get("firstname")
         lastname = request.form.get("lastname")
@@ -187,3 +189,8 @@ def medicalinfo():
         return redirect("/")
     else:
         return render_template("medinfo.html")
+
+# Edit Profile
+@app.route("/profile")
+def profilepage():
+    return render_template('myprofile.html', thename="test")
