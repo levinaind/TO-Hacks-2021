@@ -197,16 +197,12 @@ form input {
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
 	background-color: white;
-	col
 }
 form input ::placeholder {
 	font-family: "Poppins", sans-serif;
 	color: gray;
 }
-.geo-data {
-
-}
-.geo-data li{
+.geo-data li {
 	margin: 1em 0;
 	font-weight: 700;
 	text-align: center;
@@ -321,7 +317,6 @@ main .row:after {
 .forms {
 	position: fixed;
 }
-
 
 .s-input {
 	position: fixed;
