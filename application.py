@@ -28,7 +28,7 @@ db = database()
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if session.get("user_id") is None:
+        if session.get('user_id') is None:
             return redirect("/login")
         return f(*args, **kwargs)
     return decorated_function
@@ -37,7 +37,50 @@ def login_required(f):
 @app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
-    return render_template("index.html")
+    if request.method == "POST":
+        location = request.form.get("location")
+        location_arr = location.split(',')
+        place = location_arr[0]
+        city = location_arr[2][1:] + "," + location_arr[3]
+        date = request.form.get("date")
+
+        db.execute("INSERT INTO locations VALUES (:id, :place, :time, :city)",
+                   {"id": session['user_id'], "place": place, "time": date, "city": city})
+        db.commit()
+        return redirect("/")
+    else:
+        locations = []
+        rows = db.execute("SELECT * FROM locations WHERE userid=:user", {"user": session['user_id']}).fetchall()
+        for row in rows:
+            month_num = row['time'][5:7]
+            if month_num == "01":
+                month = "January"
+            elif month_num == "02":
+                month = "February"
+            elif month_num == "03":
+                month = "March"
+            elif month_num == "04":
+                month = "April"
+            elif month_num == "05":
+                month = "May"
+            elif month_num == "06":
+                month = "June"
+            elif month_num == "07":
+                month = "July"
+            elif month_num == "08":
+                month = "August"
+            elif month_num == "09":
+                month = "September"
+            elif month_num == "10":
+                month = "October"
+            elif month_num == "11":
+                month = "November"
+            else:
+                month = "December"
+            date = row['time'][8:]
+            locations.append([row['place'], row['city'], date, month])
+
+        return render_template("index.html", locations=locations)
 
 
 # LOGIN

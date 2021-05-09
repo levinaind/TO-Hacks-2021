@@ -2,6 +2,12 @@
 
 {% block title %}
 	<link rel="stylesheet" href="{{url_for('static', filename='indexstyle.css')}}" />
+	<script
+			src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCnMi7Nf77XbwmLZGDqQlhQx6-AyU8fSSQ&callback=initMap"
+			async
+			defer
+		></script>
+
 	<title>TraceNext</title>
 {% endblock %}
 
@@ -10,27 +16,53 @@
 		<section class="sitename">TraceNext</section>
 		<a href="">My Profile</a>
 	</header>
-
-	<form action="">
-		<div class="entries">
-			<input type="text" name="location" placeholder="Location" />
-			<input type="date" name="date" placeholder="" />
-		</div>
-		<button>ADD</button>
-	</form>
 	<main>
-		<h1>Dashboard</h1>
-		<div class="log">
-			<div class="date">
-				<div class="day">17</div>
-				<div class="month">Aug</div>
-			</div>
-			<div class="location">
-				<div class="place">University of Waterloo</div>
-				<div class="area">Waterloo, ON</div>
-			</div>
-			<button>X</button>
+		<div class="column-left">
+			<h1>Dashboard</h1>
+			<ul>
+				{% for location in locations %}
+				<li>
+					<div class="log">
+						<div class="date">
+							<div class="day">{{ location[2] }}</div>
+							<div class="month">{{ location[3] }}</div>
+						</div>
+						<div class="location">
+							<div class="place">{{ location[0] }}</div>
+							<div class="area">{{ location[1] }}</div>
+						</div>
+						<button>X</button>
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
 		</div>
-	</main>
-	<script src="app.js"></script>
+		<section class="column-right">
+				<!-- Google map -->
+				<div class="map-pos" id="map"></div>
+
+				<form action="/" method="post" id="location-form">
+					<!-- Display geolocation data -->
+					<ul class="geo-data">
+						<li>
+							Location
+							<span id="location">
+								Please enter location on above search bar
+							</span>
+						</li>
+					</ul>
+					<div class="entries">
+						<input
+							type="text"
+							id="searchInput"
+							name="location"
+							placeholder="Location"
+						/>
+						<input type="date" name="date" placeholder="" />
+					</div>
+					<button type="submit" form="location-form">ADD</button>
+				</form>
+			</section>
+		</main>
+		<script src="{{url_for('static', filename='mapapp.js')}}"></script>
 {% endblock %}

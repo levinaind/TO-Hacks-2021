@@ -236,10 +236,12 @@ form button:hover {
 	cursor: pointer;
 }
 
+
 .dashboard {
 	display: flex;
 	justify-content: space-between;
 	margin: 0 5%;
+
 }
 .dashboard h1 {
 	font-size: 2em;
@@ -272,6 +274,8 @@ form button:hover {
 main {
 	margin: 1em 5% 0 5%;
 	display: flex;
+
+
 }
 
 .log {
@@ -357,6 +361,7 @@ main .row:after {
 
 .s-input {
 	position: fixed;
+
 }
 
 #searchInput {
@@ -365,5 +370,7 @@ main .row:after {
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	letter-spacing: 1.1px;
+
 	display: block;
+
 }
