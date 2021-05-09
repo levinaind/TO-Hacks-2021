@@ -1,0 +1,447 @@
+/* CSS RESET  */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ------------------------------------------------------------------------------------ */
+
+:root {
+	--primary-blue: #6fbee5;
+	--primary-yellow: #ebac78;
+	--accent-blue: #007194;
+	--placeholder: rgb(216, 216, 216);
+}
+button:hover {
+	cursor: pointer;
+	color: var(--primary-yellow);
+	transition: 0.2s;
+}
+
+body {
+	background-color: var(--primary-blue);
+	font-family: "Poppins", sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	color: white;
+	background-color: var(--accent-blue);
+	align-items: center;
+	border-bottom: solid var(--primary-yellow) 2px;
+}
+header nav {
+	width: 30%;
+	display: flex;
+	justify-content: space-around;
+	margin-right: 2em;
+}
+header .sitename {
+	margin-left: 2em;
+	font-family: "Cookie", cursive;
+	font-size: 2em;
+}
+header a {
+	color: white;
+	text-decoration: none;
+	margin-right: 5%;
+}
+header a:hover {
+	text-decoration: underline var(--primary-yellow) 2px;
+	transition: linear 0.1s;
+}
+
+form {
+	align-items: center;
+	border-radius: 20px;
+	border: solid var(--primary-yellow) 2px;
+	width: 90%;
+	padding: 0 1.5em;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	background-color: white;
+	margin-top: 15%;
+	
+}
+form input {
+	display: block;
+	border-radius: 20px;
+	height: 3em;
+	border: solid var(--primary-yellow) 2px;
+	width: 90%;
+	padding: 0 1.5em;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	background-color: white;
+}
+form input ::placeholder {
+	font-family: "Poppins", sans-serif;
+	color: gray;
+}
+.geo-data li {
+	margin: 1em 0;
+	font-weight: 700;
+	text-align: center;
+	color: var(--accent-blue);
+	text-transform: uppercase;
+}
+#location {
+	font-style: italic;
+	display: block;
+	margin-top: 5px;
+	color: black;
+}
+
+form button {
+	display: block;
+	width: 100%;
+	padding: 0.5em;
+	font-weight: 6em;
+	margin: 1em auto;
+	background-color: white;
+	border: solid var(--primary-yellow) 2px;
+	font-weight: 600;
+	font-size: 1em;
+	font-family: "Poppins", sans-serif;
+	border-radius: 30px;
+}
+form button:hover {
+	background-color: var(--primary-yellow);
+	text-decoration: underline;
+	color: white;
+}
+
+.dashboard {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 5%;
+}
+.dashboard h1 {
+	font-size: 2em;
+	font-weight: 700;
+	margin: auto 0;
+	width: 50%;
+}
+.dashboard .dasboardbutton {
+	width: 50%;
+}
+.dashboard button {
+	font-weight: 700;
+	margin: 1em auto;
+	background-color: var(--primary-yellow);
+	border: none;
+	font-weight: 600;
+	font-size: 1em;
+	font-family: "Poppins", sans-serif;
+	color: white;
+	font-size: 1.5em;
+	padding: 0.25em;
+	height: 2.5em;
+	width: 8em;
+}
+.dashboard button:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+main {
+	margin: 1em 5% 0 5%;
+	display: flex;
+}
+
+.log {
+	border: solid var(--primary-yellow) 2px;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 30px;
+	width: 60%;
+	font-family: "Poppins", sans-serif;
+	height: 4em;
+	padding: 0.5em;
+	background-color: white;
+	margin: 1em 0;
+}
+
+.log .date {
+	margin: 0 1em;
+	font-weight: 600;
+	font-size: 1.3em;
+}
+.log .date .day {
+	color: var(--primary-yellow);
+	font-size: 2em;
+}
+.log .date .month {
+	font-size: 1em;
+	color: rgb(78, 78, 78);
+}
+
+.log .location {
+	margin-right: 10%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	margin-top: -55px;
+	
+
+	
+}
+.log .location .place {
+	font-weight: 600;
+	font-size: 1.8em;
+	margin-bottom: 0.2em;
+	margin-left: 17%;
+	width: 25px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	
+}
+.log .location .area {
+	font-weight: 500;
+	font-size: 1.3em;
+	margin-left: 17%;
+	
+	color: var(--accent-blue);
+}
+
+.log button {
+	border: none;
+
+	background-color: white;
+	font-size: 2em;
+	color: black;
+	margin-left: 90%;
+	margin-top: -30%;
+	position: center;
+	transform: translateY(-27px);
+	
+	width: 1em;
+}
+
+
+main .column-left {
+	width: 60%;
+}
+main .column-right {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+}
+main .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.map-pos {
+	position: fixed;
+	height: 400px;
+}
+
+.forms {
+	
+	height:50%;
+}
+
+.s-input {
+	position: fixed;
+}
+
+#searchInput {
+	width: 50%;
+	height: 2em;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	letter-spacing: 1.1px;
+
+	display: block;
+}
+
+.modal {
+	background-color: rgba(0, 0, 0, 0.637);
+	transition: 200ms;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+}
+.modal__contents {
+	background-color: white;
+	padding: 2em 4em;
+	width: 50%;
+	border-radius: 10px;
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.modal__exit {
+	background-color: white;
+	border: none;
+	align-self: flex-end;
+	font-size: 1.5em;
+	font-weight: 600;
+}
+.modal__contents h3 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+.modal__contents p {
+	text-align: center;
+	font-size: 0.9em;
+	line-height: 1.1em;
+	color: gray;
+}
+.modal__contents p b {
+	font-weight: 600;
+	text-decoration: underline;
+	color: red;
+}
+.submit-confirm {
+	height: 2em;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 2em;
+	border: none;
+	background-color: white;
+}
+.submit-confirm:hover {
+	text-decoration: underline;
+}
