@@ -177,38 +177,61 @@ header a:hover {
 }
 
 form {
-	width: 100%;
-	display: flex;
-	margin: 1em;
 	align-items: center;
+	border-radius: 20px;
+	border: solid var(--primary-yellow) 2px;
+	width: 90%;
+	padding: 0 1.5em;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	background-color: white;
+	margin-top: 2em;
 }
 form input {
 	display: block;
 	border-radius: 20px;
 	height: 3em;
-	margin: 0.8em 0;
 	border: solid var(--primary-yellow) 2px;
-	width: 40vw;
+	width: 90%;
 	padding: 0 1.5em;
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
+	background-color: white;
+	col
 }
 form input ::placeholder {
 	font-family: "Poppins", sans-serif;
 	color: gray;
 }
+.geo-data {
+
+}
+.geo-data li{
+	margin: 1em 0;
+	font-weight: 700;
+	text-align: center;
+	color: var(--accent-blue);
+	text-transform: uppercase;
+}
+#location {
+	font-style: italic;
+	display: block;
+	margin-top: 5px;
+	color: black;
+}
 
 form button {
-	height: 3em;
-	width: 6em;
+	display: block;
+	width: 100%;
 	padding: 0.5em;
 	font-weight: 6em;
-	margin: 1em;
+	margin: 1em auto;
 	background-color: white;
 	border: solid var(--primary-yellow) 2px;
 	font-weight: 600;
-	font-size: 1.2em;
+	font-size: 1em;
 	font-family: "Poppins", sans-serif;
+	border-radius: 30px;
 }
 form button:hover {
 	background-color: var(--primary-yellow);
@@ -218,13 +241,12 @@ form button:hover {
 }
 
 main {
-	margin-top: 1em;
+	margin: 1em 5% 0 5%;
 	display: flex;
 }
 main h1 {
 	font-size: 2em;
 	font-weight: 700;
-	margin-left: 1em;
 }
 
 .log {
@@ -239,7 +261,7 @@ main h1 {
 	height: 4em;
 	padding: 0.5em;
 	background-color: white;
-	margin: 1em;
+	margin: 1em 0;
 }
 
 .log .date {
@@ -278,10 +300,12 @@ main h1 {
 	margin-right: 5%;
 }
 main .column-left {
-	width: 70%;
+	width: 60%;
 }
 main .column-right {
-	width: 25%;
+	width: 40%;
+	display: flex;
+	flex-direction: column;
 }
 main .row:after {
 	content: "";
@@ -297,10 +321,18 @@ main .row:after {
 .forms {
 	position: fixed;
 }
-.geo-data {
-	color: white;
-}
+
 
 .s-input {
 	position: fixed;
+	background-color: red;
+}
+
+#searchInput {
+	width: 50%;
+	height: 2em;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	letter-spacing: 1.1px;
+	transform: translateY(1em);
 }

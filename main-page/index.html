@@ -32,18 +32,6 @@
 			<section class="sitename">TraceNext</section>
 			<a href="">My Profile</a>
 		</header>
-		<form action="">
-			<div class="entries">
-				<input
-					type="text"
-					id="searchInput"
-					name="location"
-					placeholder="Location"
-				/>
-				<input type="date" name="date" placeholder="" />
-			</div>
-			<button>ADD</button>
-		</form>
 
 		<main>
 			<section class="column-left">
@@ -64,10 +52,27 @@
 				<!-- Google map -->
 				<div class="map-pos" id="map"></div>
 
-				<!-- Display geolocation data -->
-				<ul class="geo-data">
-					<li>Full Address: <span id="location"></span></li>
-				</ul>
+				<form action="">
+					<!-- Display geolocation data -->
+					<ul class="geo-data">
+						<li>
+							Location
+							<span id="location">
+								Please enter location on above search bar
+							</span>
+						</li>
+					</ul>
+					<div class="entries">
+						<input
+							type="text"
+							id="searchInput"
+							name="location"
+							placeholder="Location"
+						/>
+						<input type="date" name="date" placeholder="" />
+					</div>
+					<button>ADD</button>
+				</form>
 			</section>
 		</main>
 		<script src="app.js"></script>
