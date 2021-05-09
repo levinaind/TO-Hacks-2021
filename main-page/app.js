@@ -1,9 +1,22 @@
-const send = document.querySelector("#submit");
-send.addEventListener("click", function (e) {
+const submit = document.querySelector("#submit");
+submit.addEventListener("click", function (e) {
 	e.preventDefault();
-	console.log("dss");
+	const modal = document.querySelector(".modal");
+	modal.style.display = "flex";
+});
+
+const closeModal = document.querySelector(".modal__exit");
+closeModal.addEventListener("click", function () {
+	const modal = document.querySelector(".modal");
+	modal.style.display = "none";
+});
+
+const confirm = document.querySelector(".submit-confirm");
+confirm.addEventListener("click", function (e) {
+	e.preventDefault();
 	sendEmail(true);
 });
+
 function sendEmail(positive) {
 	console.log("start");
 
