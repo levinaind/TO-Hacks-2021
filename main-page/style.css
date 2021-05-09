@@ -236,13 +236,46 @@ form button:hover {
 	cursor: pointer;
 }
 
+
+.dashboard {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 5%;
+
+}
+.dashboard h1 {
+	font-size: 2em;
+	font-weight: 700;
+	margin: auto 0;
+	width: 50%;
+}
+.dashboard .dasboardbutton {
+	width: 50%;
+}
+.dashboard button {
+	font-weight: 700;
+	margin: 1em auto;
+	background-color: var(--primary-yellow);
+	border: none;
+	font-weight: 600;
+	font-size: 1em;
+	font-family: "Poppins", sans-serif;
+	color: white;
+	font-size: 1.5em;
+	padding: 0.25em;
+	height: 2.5em;
+	width: 8em;
+}
+.dashboard button:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
 main {
 	margin: 1em 5% 0 5%;
 	display: flex;
-}
-main h1 {
-	font-size: 2em;
-	font-weight: 700;
+
+
 }
 
 .log {
@@ -276,11 +309,18 @@ main h1 {
 
 .log .location {
 	margin-right: 10%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 23em;
 }
 .log .location .place {
 	font-weight: 600;
 	font-size: 1.8em;
 	margin-bottom: 0.2em;
+	width: 23em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 .log .location .area {
 	font-weight: 500;
@@ -294,6 +334,7 @@ main h1 {
 	font-size: 2em;
 	color: var(--primary-yellow);
 	margin-right: 5%;
+	width: 1em;
 }
 main .column-left {
 	width: 60%;
@@ -320,7 +361,7 @@ main .row:after {
 
 .s-input {
 	position: fixed;
-	background-color: red;
+
 }
 
 #searchInput {
@@ -329,5 +370,7 @@ main .row:after {
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	letter-spacing: 1.1px;
-	transform: translateY(1em);
+
+	display: block;
+
 }
