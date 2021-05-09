@@ -1,4 +1,5 @@
 # 🏙 TO-Hacks-2021: TraceNext 
+![TraceNext in a glance](https://github.com/levinaind/TO-Hacks-2021/blob/main/TraceNext.png)
 ## 💡 Inspiration
 The pandemic taught us one thing: We’re not ready for another one. We aim to prepare us if and when the next comes by harnessing the full potential of contact tracing.
 
@@ -7,6 +8,7 @@ Most countries elected for lockdowns whenever COVID-19 cases surge. While effect
 
 
 ## 🧐 What it does
+![TraceNext Main Page](https://github.com/levinaind/TO-Hacks-2021/blob/main/TraceNext-Dashboard%20.png)
 Our web application can help alert people if they have been in contact with someone who has tested positive for COVID-19. The users can do this by logging places they’ve been in for the last 30 days, as well as declaring whether they have tested positive for COVID-19 🦠 and whether they’ve been vaccinated 💉 
 
 In case a user declared a positive result in a location, all users who were visiting on the same day will be notified 📩. This will help in curbing transmission rates, while making life as normal as possible. Since users log the places they’ve been in themselves, it also guarantees privacy 🔒 for users who are conscious of it.
