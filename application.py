@@ -218,3 +218,8 @@ def logout():
 
     # Redirect to login form
     return redirect("/")
+
+# COMPLETED
+@app.route("/completed")
+def completed():
+    return render_template("completed.html")

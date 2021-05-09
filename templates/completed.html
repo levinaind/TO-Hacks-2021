@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	<link rel="stylesheet" href="{{url_for('static', filename='completedstyle.css')}}" />
+	<title>TraceNext</title>
+{% endblock %}
+
+{% block body %}
+	<header>
+		<section class="sitename">TraceNext</section>
+		<nav>
+			<a href="" id="nav-about">about</a>
+			<a href="" id="nav-works">how it works</a>
+			<a href="" id="nav-contacts">contact us</a>
+		</nav>
+	</header>
+
+	<main>
+		<div class="text">
+			<h1>Thank you for helping us keep you safe!</h1>
+			<h2>Please check your email for your results.</h2>
+		</div>
+		<div class="gif">
+			<iframe
+				src="https://giphy.com/embed/ZfK4cXKJTTay1Ava29"
+				width="480"
+				height="400"
+				frameborder="0"
+				class="giphy-embed"
+				allowfullscreen
+			></iframe>
+			<p>
+				<a href="https://giphy.com/gifs/theoffice-ZfK4cXKJTTay1Ava29"
+					>via GIPHY</a
+				>
+			</p>
+		</div>
+	</main>
+{% endblock %}
