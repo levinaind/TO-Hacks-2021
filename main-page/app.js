@@ -1,4 +1,4 @@
-const send = document.querySelector("form button");
+const send = document.querySelector("#submit");
 send.addEventListener("click", function (e) {
 	e.preventDefault();
 	console.log("dss");
