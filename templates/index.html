@@ -2,6 +2,7 @@
 
 {% block title %}
 	<link rel="stylesheet" href="{{url_for('static', filename='indexstyle.css')}}" />
+	<script src="{{url_for('static', filename='indexgmaps.js')}}"></script>
 	<script
 			src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCnMi7Nf77XbwmLZGDqQlhQx6-AyU8fSSQ&callback=initMap"
 			async
@@ -14,10 +15,16 @@
 {% block body %}
 	<header>
 		<section class="sitename">TraceNext</section>
-		<a href="">My Profile</a>
+		<a href="/profile">My Profile</a>
 	</header>
+	<section class="dashboard">
+		<h1>Dashboard</h1>
+		<div class="submitbutton">
+			<button id="submit">SUBMIT</button>
+		</div>
+	</section>
 	<main>
-		<div class="column-left">
+		<section class="column-left">
 			<h1>Dashboard</h1>
 			<ul>
 				{% for location in locations %}
@@ -36,12 +43,12 @@
 				</li>
 				{% endfor %}
 			</ul>
-		</div>
+		</section>
 		<section class="column-right">
 				<!-- Google map -->
 				<div class="map-pos" id="map"></div>
 
-				<form action="/" method="post" id="location-form">
+				<form action="/" method="post">
 					<!-- Display geolocation data -->
 					<ul class="geo-data">
 						<li>
@@ -55,14 +62,35 @@
 						<input
 							type="text"
 							id="searchInput"
-							name="location"
-							placeholder="Location"
+							name="locationmap"
+							placeholder="Enter the Location"
 						/>
 						<input type="date" name="date" placeholder="" />
 					</div>
-					<button type="submit" form="location-form">ADD</button>
+					<button type="submit" id="add">ADD</button>
 				</form>
 			</section>
 		</main>
+		<!-- Modal tutorial by https://www.youtube.com/watch?v=KX0NR5HtQ1Q -->
+		<div class="modal">
+			<div class="modal__contents">
+				<button class="modal__exit">X</button>
+				<h3>Are you sure you've inputted all your locations?</h3>
+				<p>
+					Submitting this form will log changes to your profile and may notify
+					others if you have declared a positive COVID-19 test results.
+					<b>Please do not use this to spam.</b>
+				</p>
+				<button class="submit-confirm">confirm</button>
+			</div>
+		</div>
+	<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+		></script>
+	<script type="text/javascript">
+			(function () {
+				emailjs.init("YOUR_USER_ID");
+			})();
+		</script>
 		<script src="{{url_for('static', filename='mapapp.js')}}"></script>
 {% endblock %}
