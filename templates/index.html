@@ -12,8 +12,11 @@
 
 {% block body %}
 	<header>
-		<section class="sitename">TraceNext</section>
-		<a href="/profile">My Profile</a>
+		<section class="sitename"><a href="/">TraceNext</a></section>
+		<span>
+			<a href="/medicalinfo">Update Medical Info</a>
+			<a href="/profile">My Profile</a>
+		</span>
 	</header>
 	<section class="dashboard">
 		<h1>Dashboard</h1>
@@ -42,7 +45,6 @@
 			</ul>
 		</section>
 		<section class="column-right">
-
 				<form action="/" method="post">
 					<div class="map-pos" id="map"></div>
 					 Display geolocation data

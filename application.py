@@ -195,6 +195,26 @@ def medicalinfo():
         return render_template("medinfo.html")
 
 # Edit Profile
-@app.route("/profile")
+@app.route("/profile", methods=["GET", "POST"])
 def profilepage():
-    return render_template('myprofile.html', thename="test")
+    rows = db.execute("SELECT * FROM users WHERE userid=:userid", {"userid": session['user_id']}).fetchone()
+    if request.method == "POST":
+        if check_password_hash(rows['pass'], request.form.get('password')):
+            db.execute("UPDATE users SET pass=:password, firstname=:firstname, lastname=:lastname, email=:email \
+                        WHERE userid=:userid", {"password": generate_password_hash(request.form.get('newpassword')),
+                                                "firstname": rows['firstname'], "lastname": rows['lastname'],
+                                                "email": rows['email'], "userid": session['user_id']})
+            db.commit()
+        return redirect('/')
+    return render_template('myprofile.html', email=rows['email'],
+                           firstname=rows['firstname'], lastname=rows['lastname'])
+
+# LOGOUT
+@app.route("/logout")
+def logout():
+
+    # Clear Session
+    session.clear()
+
+    # Redirect to login form
+    return redirect("/")

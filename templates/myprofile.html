@@ -7,8 +7,8 @@
 
 {% block body %}
     <header>
-        <section class="sitename">TraceNext</section>
-        <a href="#" id="nav-log">Log Out</a>
+        <section class="sitename"><a href="/">TraceNext</a></section>
+        <a href="/logout" id="nav-log">Log Out</a>
     </header>
 
     <h1>
@@ -16,37 +16,31 @@
     </h1>
 
     <div class="mainform">
-        <form action="" id="form1">
+        <form action="/profile" method="post" id="form1">
             <div>
                 <label for="firstname">First Name</label><br>
-                <input class="input" type="text" name="myprofile" id="firstname" required /><br>
+                <input class="input" type="text" name="firstname" id="firstname"
+                       required value="{{ firstname }}"><br>
             </div>
+            <div>
             <label for="lastname">Last Name</label><br>
-            <input class="input" type="text" name="myprofile" id="lastname" required /><br>
+            <input class="input" type="text" name="lastname" id="lastname"
+                   required value="{{ lastname }}"/><br>
+            </div>
             <div>
                 <label for="email">Email</label><br>
-                <input class="input" type="email" name="myprofile" id="email" required /><br>
+                <input class="input" type="email" name="email" id="email"
+                       required value="{{ email }}"/><br>
             </div>
             <div>
                 <label for="password">Old Password</label><br>
-                <input class="input" type="password" name="myprofile" id="password" required /><br>
+                <input class="input" type="password" name="password" id="password" required /><br>
             </div>
             <div>
                 <label for="password">New Password</label><br>
-                <input class="input" type="password" name="myprofile" id="newpassword" required /><br>
+                <input class="input" type="password" name="newpassword" id="newpassword" required /><br>
             </div>
-            <div>
-                <label>
-                    COVID-19 VACCINATION<br>
-                    <input type="radio" name="vacc-yes">
-                    Yes
-                </label>
-                <label>
-                    <input type="radio" name="vacc-no">
-                    No
-                </label>
-            </div>
-            <button>
+            <button type="submit">
                 SAVE CHANGES
             </button>
         </form>

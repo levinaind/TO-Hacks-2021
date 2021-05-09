@@ -71,11 +71,9 @@
 				</ul>
 			</section>
 			<section class="column-right">
-				<!-- Google map -->
-				<div class="map-pos" id="map"></div>
-
-				<form action="">
-					<!-- Display geolocation data -->
+				<form action="/" method="post">
+					<div class="map-pos" id="map"></div>
+					 Display geolocation data
 					<ul class="geo-data">
 						<li>
 							Location
@@ -89,11 +87,11 @@
 							type="text"
 							id="searchInput"
 							name="location"
-							placeholder="Enter the location"
+							placeholder="Enter the Location"
 						/>
 						<input type="date" name="date" placeholder="" />
 					</div>
-					<button id="add">ADD</button>
+					<button type="submit" id="add">ADD</button>
 				</form>
 			</section>
 		</main>
