@@ -17,7 +17,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="style.css" />
-
+		<script src="gmaps.js"></script>
 		<script
 			src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCnMi7Nf77XbwmLZGDqQlhQx6-AyU8fSSQ&callback=initMap"
 			async
@@ -64,18 +64,32 @@
 							Location
 							<span id="location">
 								Please enter location on above search bar
-								
 							</span>
 						</li>
 					</ul>
 					<div class="entries">
-						<input type="text" id ="searchInput" name="location" placeholder="Enter the location" />
+						<input
+							type="text"
+							id="searchInput"
+							name="location"
+							placeholder="Enter the location"
+						/>
 						<input type="date" name="date" placeholder="" />
 					</div>
-					<button>ADD</button>
+					<button id="add">ADD</button>
 				</form>
 			</section>
 		</main>
+		<!-- API for sending emails (still experimenting) -->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init("YOUR_USER_ID");
+			})();
+		</script>
 		<script src="app.js"></script>
 	</body>
 </html>
