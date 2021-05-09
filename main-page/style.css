@@ -279,7 +279,6 @@ main {
 }
 
 .log {
-	position: relative;
 	border: solid var(--primary-yellow) 2px;
 	display: flex;
 	justify-content: space-between;

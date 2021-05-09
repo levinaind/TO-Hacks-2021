@@ -279,13 +279,11 @@ main {
 }
 
 .log {
-	position: relative;
 	border: solid var(--primary-yellow) 2px;
-	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 30px;
-	width: 70%;
+	width: 60%;
 	font-family: "Poppins", sans-serif;
 	height: 4em;
 	padding: 0.5em;

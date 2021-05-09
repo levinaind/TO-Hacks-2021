@@ -34,22 +34,24 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+# # ADD
+# @app.route("/")
+# def add():
+
 # INDEX
 @app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
     if request.method == "POST":
-        location = request.form.get("locationmap")
-        print(location)
+        location = request.form.get('location')
         location_arr = location.split(',')
         place = location_arr[0]
         city = location_arr[2][1:] + "," + location_arr[3]
-        date = request.form.get("date")
-        print(date)
+        date = request.form["date"]
 
-        # db.execute("INSERT INTO locations VALUES (:id, :place, :time, :city)",
-        #            {"id": session['user_id'], "place": place, "time": date, "city": city})
-        # db.commit()
+        db.execute("INSERT INTO locations VALUES (:id, :place, :time, :city)",
+                   {"id": session['user_id'], "place": place, "time": date, "city": city})
+        db.commit()
         return redirect("/")
     else:
         locations = []

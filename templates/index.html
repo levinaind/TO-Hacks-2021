@@ -3,11 +3,9 @@
 {% block title %}
 	<link rel="stylesheet" href="{{url_for('static', filename='indexstyle.css')}}" />
 	<script src="{{url_for('static', filename='indexgmaps.js')}}"></script>
-	<script
-			src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCnMi7Nf77XbwmLZGDqQlhQx6-AyU8fSSQ&callback=initMap"
+	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCnMi7Nf77XbwmLZGDqQlhQx6-AyU8fSSQ&callback=initMap"
 			async
-			defer
-		></script>
+			defer></script>
 
 	<title>TraceNext</title>
 {% endblock %}
@@ -25,7 +23,6 @@
 	</section>
 	<main>
 		<section class="column-left">
-			<h1>Dashboard</h1>
 			<ul>
 				{% for location in locations %}
 				<li>
@@ -45,11 +42,10 @@
 			</ul>
 		</section>
 		<section class="column-right">
-				<!-- Google map -->
-				<div class="map-pos" id="map"></div>
 
 				<form action="/" method="post">
-					<!-- Display geolocation data -->
+					<div class="map-pos" id="map"></div>
+					 Display geolocation data
 					<ul class="geo-data">
 						<li>
 							Location
@@ -62,7 +58,7 @@
 						<input
 							type="text"
 							id="searchInput"
-							name="locationmap"
+							name="location"
 							placeholder="Enter the Location"
 						/>
 						<input type="date" name="date" placeholder="" />
@@ -85,12 +81,11 @@
 			</div>
 		</div>
 	<script type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
-		></script>
+			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 	<script type="text/javascript">
 			(function () {
 				emailjs.init("YOUR_USER_ID");
 			})();
-		</script>
-		<script src="{{url_for('static', filename='mapapp.js')}}"></script>
+	</script>
+	<script src="{{url_for('static', filename='mapapp.js')}}"></script>
 {% endblock %}
